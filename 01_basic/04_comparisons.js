@@ -13,7 +13,7 @@ console.log (null >= 0);
 
 console.log (undefined == 0);
 console.log (undefined >= 0);
-console.log (undefined < 0); always try to avoid this type of comparison   */ 
+console.log (undefined < 0); always try to avoid this type of comparison   */
 
 // === 
 
