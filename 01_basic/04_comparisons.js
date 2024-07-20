@@ -18,3 +18,4 @@ console.log (undefined < 0); always try to avoid this type of comparison   */
 // === 
 
 console.log("2" === 2);
+//comprison
