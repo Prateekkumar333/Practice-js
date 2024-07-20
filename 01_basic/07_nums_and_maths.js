@@ -24,9 +24,9 @@ const hundreds = 1000000
 // console.log(Math.min(4, 3, 6));
 
 console.log(Math.random());// this give always number like 0.1, 0.2 , 0.7
-console.log((Math.random()*10) + 1);// *10 shifts the value to the left //1 is added to not get the value 0 
+console.log((Math.random()*10) + 1);// *10 shifts the value to the left //1 is added to not get the value 0
 
-const min = 10 
+const min = 10
 const max = 20 // In some cases you have to define min and max
 
 console.log(Math.floor(Math.random() * (max - min + 1 )) + min )
