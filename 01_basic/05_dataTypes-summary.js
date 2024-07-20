@@ -15,7 +15,7 @@ let userEmail;
 const id = Symbol('123')
 const anotherId = Symbol('123')
 
-console.log (id === anotherId)
+//console.log (id === anotherId)
 
 
 const bigNumber = 446546546546549878432067984313546546459878954564n
@@ -39,7 +39,7 @@ const myFunciton = function(){
     console.log("Hello world");
 }
 
-console.log(typeof myFunciton)
+//console.log(typeof myFunciton)
 
 
 
@@ -48,3 +48,29 @@ console.log(typeof myFunciton)
 
 // javaScript is statically typed language or dynamically type language ?
 // ans: javaScript is dynamically typed language because we don't have to specify the type of data variable holds but in java and typeScript we have to specify like const number:number = 5 this is statically typed language.
+
+
+
+// ***********************************************************************************************************
+
+// Stack memory (Primitive)(copy), Heap memory (Non-Primitive)(reference)
+
+let myYoutubeName = "hiteshchoudharydotcom"
+
+let anothername = myYoutubeName
+anothername = "chaiaurcode"
+
+console.log(anothername);
+console.log(myYoutubeName);
+
+let userOne = {
+    email: "user@google.com",
+    upi: "user@ybi",
+}
+
+let userTwo = userOne
+
+userTwo.email = "prateek@google.com"
+
+console.log(userTwo.email)
+console.log(userOne.email)
