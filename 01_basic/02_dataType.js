@@ -1,11 +1,11 @@
 "use strict"; //treat all JS codes in newer version
-//alert (3+3) // we are using node js not browser
+//alert (3+3) // we are using node js not browser, its not gonna work.
 console.log(3 
     + 3
 ) // code readabilty should be high
 
 
-/*primitive data types
+/*   primitive data types
 number => 2 to power 53
 bigint 
 string => ""
@@ -18,4 +18,4 @@ symbol => unique
 object
 
 console.log(typeof undefined);//undefined
-console.log(typeof null);//object*/
+console.log(typeof null);//object  */
