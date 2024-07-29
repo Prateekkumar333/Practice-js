@@ -8,7 +8,7 @@
 ## project 1
 
 ```javascript
-console.log("hitesh")
+
 const buttons = document.querySelectorAll('.button');
 const body = document.querySelector('body');
 
@@ -34,7 +34,7 @@ buttons.forEach(function (button) {
 });
 
 
-...
+```javascript
 
 
 # project 2 solution
@@ -75,3 +75,16 @@ form.addEventListener('submit', function(event){
     }
   
 })
+
+
+```javascript
+
+## project 3 solution code
+
+const clock = document.getElementById('clock')
+
+
+setInterval(function(){
+  const date = new Date()
+  clock.innerHTML = date.toLocaleTimeString()
+} ,1000)
