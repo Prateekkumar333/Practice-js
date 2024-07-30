@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #butt{
+            height: 50px;
+            width: 100px;
+            
+        }
+        h2{
+            
+        }
+    </style>
+</head>
+<body style="background-color: #212121; color: aliceblue; text-align: center;">
+<!-- 0	UNSENT	Client has been created. open() not called yet.
+1	OPENED	open() has been called.
+2	HEADERS_RECEIVED	send() has been called, and headers and status are available.
+3	LOADING	Downloading; responseText holds partial data.
+4	DONE	The operation is complete. -->
+<h2> click here to watch hitesh's image and followers</h2>
+<button id="butt">click me</button>
+<div id="div">
+    
+</div>
+
+</body>
+<script>
+    // const requestUrl = 'https://api.github.com/users/Prateekkumar333' // api from where we gonna get data
+    // const xhr = new XMLHttpRequest()
+    // xhr.open('GET', requestUrl) // opens request and use get methods to 
+    // xhr.onreadystatechange = function(){ 
+    //     console.log(xhr.readyState); // console the stages
+    //     if (xhr.readyState === 4) { // condition when stage 4 hits do the work which is spesify
+    //         const data = JSON.parse(this.responseText) // this convert string into json
+    //         console.log(typeof data);
+    //         console.log(data.followers);
+            
+    //     }
+        
+    // }
+    // xhr.send();
+    let output1;
+    let output2;
+    
+    const requestUrl = 'https://api.github.com/users/hiteshchoudhary'
+    const xhr = new XMLHttpRequest()
+    xhr.open('GET', requestUrl)
+    xhr.onreadystatechange = function(){
+        console.log(xhr.readyState);
+        if (xhr.readyState === 4) {
+            const data = JSON.parse(this.responseText)
+            output1 = data.avatar_url;
+            output2 = data.followers;
+        }
+    }
+
+
+    
+    const div = document.querySelector('div')
+    const button = document.querySelector('#butt')
+    button.addEventListener('click', function(){
+
+        div.innerHTML= '';
+        
+        const image = document.createElement('img')
+        image.alt = 'User Avtar'
+        image.style.height = '200px'
+        image.src = output1
+        image.style.width = '200px'
+        image.style.paddingTop = '100px'
+        div.appendChild(image)
+        
+        
+
+        const p = document.createElement('p')
+        p.textContent = `Followers : ${output2}`
+        div.appendChild(p)
+        
+
+    })
+    xhr.send()
+    
+    
+</script>
+</html>
