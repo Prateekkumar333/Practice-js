@@ -36,4 +36,4 @@ function user(username, loginCount, isLoggedIn) {
 const userOne = new user("hitesh", 12, true)
 const userTwo = new user("chaiAurCode", 11, false)
 console.log(userOne.constructor);
-// console.log(userTwo);
+// console.log(userTwo); 
